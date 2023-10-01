@@ -1,9 +1,32 @@
-meme_dict = {
-            "КРИНЖ": "Что-то очень странное или стыдное",
-            "ЛОЛ": "Что-то очень смешное"
-            }
-word = input("Введите непонятное слово (большими буквами!): ")
-if word in meme_dict.keys():
-    print(meme_dict[word])
-else:
-    print('Такого слова не существует')
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='/', intents=discord.Intents.default())
+
+@bot.command()
+async def Привет(ctx):
+    await ctx.send(f'Привет! Я бот {bot.user}! И я тебе помогу разобраться все в нашей игре! Напиши мне - /Игра, /Поддержка, /Сайт, /Магазин, /Пока')
+@bot.command()
+async def Игра(ctx):
+    await ctx.send(f'Перейди по ссылке в роблокс - https://www.roblox.com/games/14557455274/unnamed, а также Дискорд Канал - https://discord.gg/DtqUN4TSXy')
+@bot.command()
+async def Поддержка(ctx):
+    await ctx.send(f'Напиши fraly и отравьте ему баги! ')
+@bot.command()
+async def Сайт(ctx):
+    await ctx.send(f'Сайт пока не готов! Но скоро появится!!')
+@bot.command()
+async def Магазин(ctx):
+    await ctx.send(f'На сайте в разделе Магазин. Вы сможете купить привелегии не заходя в игру! Сайт можно найти командой /Сайт. Напиши мне /Сайт и я тебе помогу его найтиж;)')
+@bot.command()
+async def Пока(ctx):
+    await ctx.send(f'Пока, буду тебя ждать!')
+
+@bot.command()
+async def heh(ctx, count_heh = 5):
+    await ctx.send("he" * count_heh)
+
+bot.run("MTE1NTQ5NzkyOTY4ODI0MDIxOQ.GervE8.t4KOL0c_Nhz7mJ7-_xVikep3tnf1jtEBQnsJtQ")
