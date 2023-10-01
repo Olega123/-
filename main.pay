@@ -29,4 +29,4 @@ async def Пока(ctx):
 async def heh(ctx, count_heh = 5):
     await ctx.send("he" * count_heh)
 
-bot.run("MTE1NTQ5NzkyOTY4ODI0MDIxOQ.GervE8.t4KOL0c_Nhz7mJ7-_xVikep3tnf1jtEBQnsJtQ")
+bot.run("MTE1NTQ5NzkyOTY4ODI0MDIxOQ.GHzpi_.wM19VYRFieXK0eDDx2POlRcnfUxYsgWZba23rk")
